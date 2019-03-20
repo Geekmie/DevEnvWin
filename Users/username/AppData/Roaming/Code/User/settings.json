@@ -1,0 +1,78 @@
+{
+    "window.restoreWindows": "none",
+
+    // Editor
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    
+    // Terminal/Shell
+    "terminal.integrated.shell.windows": "C:/msys64/usr/bin/bash.exe",
+    "terminal.integrated.shellArgs.windows": ["-i"],
+    "terminal.integrated.env.windows": { 
+        "PATH" : "${env:PATH};/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/c/Windows/System32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0/"
+    },
+
+    // Git
+    "git.path": "C:/msys64/usr/bin/git.exe",
+    
+    // Java
+    // Red Hat Java Language Support Setting
+    "java.home":"C:/Program Files/Java/jdk-11.0.1",
+    // Use the Red Hat Java Language Support Setting for JAVA_HOME
+    "maven.terminal.useJavaHome": true,
+    "java.configuration.checkProjectSettingsExclusions": false,
+    
+    // C and C++
+    // The value to use in a configuration if "includePath" is not specified, or the values to insert if "${default}" is present in "includePath".
+    "C_Cpp.default.includePath": [
+        "C:/msys64/mingw64/include",
+        "C:/msys64/mingw64/include/c++/8.2.0",
+        "C:/msys64/usr/include"
+    ],
+    // // The value to use in a configuration if "browse.path" is not specified, or the values to insert if "${default}" is present in "browse.path".
+    // "C_Cpp.default.browse.path": [
+    //     "C:/msys64/mingw64/lib/*",
+    //     // "C:/msys64/mingw64/include",
+    //     // "C:/msys64/mingw64/include/c++/8.2.0",
+    //     // "C:/msys64/mingw64/include/c++/8.2.0/tr1",
+    //     // "C:/msys64/mingw64/include/c++/8.2.0/x86_64-w64-mingw32",
+    //     "C:/msys64/mingw64/x86_64-w64-mingw32/include"
+    // ],
+    // The value to use in a configuration if "compilerPath" is either 
+    // not specified or set to "${default}".
+    "C_Cpp.default.compilerPath": "C:/msys64/mingw64/bin/gcc.exe",
+    // Controls the IntelliSense provider. "Tag Parser" provides "fuzzy" results 
+    // that are not context-aware. "Default" provides context-aware results. "Disabled" turns off C/C++ language service features.
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+
+    // Python
+    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe",
+    "python.linting.pylintEnabled": false,
+    "python.linting.pep8Enabled": true,
+    "python.linting.pep8Path": "C:\\ProgramData\\Anaconda3\\Scripts\\pep8",
+
+    // Extensions
+    // Shell Launcher
+    "shellLauncher.shells.windows": [
+        {
+            "shell": "C:\\Windows\\System32\\cmd.exe",
+            "label": "cmd"
+        },
+        {
+            "shell": "C:\\msys64\\usr\\bin\\bash.exe",
+            "label": "Msys"
+        },
+        {
+            "shell": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+            "label": "PowerShell"
+        },
+        {
+            "shell": "C:\\Program Files\\Git\\bin\\bash.exe",
+            "label": "Git bash"
+        },
+        {
+            "shell": "C:\\Windows\\System32\\bash.exe",
+            "label": "WSL Bash"
+        }
+    ],   
+}
