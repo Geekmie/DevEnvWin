@@ -67,4 +67,36 @@ Refer to msys2 github [page](https://github.com/msys2/msys2/wiki/Using-packages)
     ```
     conda info
     ```
-    If `conda` is not recognized as a command, you might need to add Anaconda to system PATH
+    If `conda` is not recognized as a command, you might need to add Anaconda to system `PATH`. Then run:
+    ```
+    conda update conda
+    ```
+    If you have permission issue, please give youself access privilege on `Anaconda` directory
+
+## VSCode
+Now we can finally put everything together into VSCode, assuming you already installed VSCode, lol.
+
+1. Open VSCode and go to File->Preferences->Settings
+
+2. Click the "{}" icon on the upper right corner (Open Settings JSON). This should bring up `settings.json`
+
+3. You can selectively copy settings in my [settings.json](User/username/AppData/Roaming/Code/User/settings.json). The content is self-explanatory. If things do not work as expected, check out the commented out lines. Please note that it is critical to use `\\` rather than `/` when defining paths. Otherwise, it might cause some problem with bash under Windows. (You might see I use `/` in some cases. That's because I am lazy, lol)
+
+Once all above is done, your default shell in VSCode should be msys bash and it will automatically activate (base) or corresponding virtual environment you setup for your workspace.
+
+## C/C++ project
+
+## Python project
+
+Run the following steps to setup conda virtual environment in VSCode for your python project.
+
+1. Open your project workspace in VSCode
+
+2. Go to File->Preferences->Settings. Click 'Workspace Settings` tab.
+
+3. Click the "{}" icon on the upper right corner (Open Settings JSON). This should bring up `settings.json` for this workspace (located in /.vscode/settings.json)
+
+4. Set the python path to the python.exe in your virtual environment. Here is an example:
+    ```
+    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\envs\\test\\python.exe",
+    ```
