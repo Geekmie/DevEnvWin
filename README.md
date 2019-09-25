@@ -36,16 +36,18 @@ Refer to msys2 github [page](https://github.com/msys2/msys2/wiki/Using-packages)
 
 2. Follow [this](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) tutorial to create your SSH key and add it to your source control server
 
-3. Copy [`sshagent.sh`](msys64/home/username/sshagent.sh) to the same path on your computer
+3. Follow [this](https://superuser.com/questions/1296024/windows-ssh-permissions-for-private-key-are-too-open) to change the permissions on your private SSH key.
 
-4. In your msys64/home/username/.bash_profile, add the following code from [`.bash_profile`](msys64/home/username/.bash_profile):
+4. Copy [`sshagent.sh`](msys64/home/username/sshagent.sh) to the same path on your computer
+
+5. In your msys64/home/username/.bash_profile, add the following code from [`.bash_profile`](msys64/home/username/.bash_profile):
     ```
     # source the sshagent.sh if it exists
     if [ -f "${HOME}/sshagent.sh" ] ; then
         source "${HOME}/sshagent.sh"
     fi
     ```
-5. Relaunch msys bash. Your SSH agent should automatically launch with your shell.
+6. Relaunch msys bash. Your SSH agent should automatically launch with your shell.
 
 ## GCC
 
