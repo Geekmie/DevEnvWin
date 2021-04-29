@@ -75,6 +75,27 @@ Refer to msys2 github [page](https://github.com/msys2/msys2/wiki/Using-packages)
     ```
     If you have permission issue, please give youself access privilege on `Anaconda` directory
 
+5. Set proxy
+    Follow [this](https://docs.anaconda.com/anaconda/user-guide/tasks/proxy/) tutorial to setup proxy if you are behind a domain network
+    Quick summary:
+    Create a `.condarc` under C:\\ProgramData\\Anaconda3\\ if you installed Anaconda for all users.
+    Add values for `proxy_servers`, for example:
+    ```
+    proxy_servers:
+        http: http://username:password@corp.com:8080
+        https: https://username:password@corp.com:8080
+    ```
+
+6. Add conda-forge channel:
+    Add conda-forge as the highest priority channel.
+    ```
+    conda config --add channels conda-forge
+    ```
+    Activate `strict` channel priority (`strict` will be activated by default in conda 5.0).
+    ```
+    conda config --set channel_priority strict
+    ```
+
 ## VSCode
 Now we can finally put everything together into VSCode, assuming you already installed VSCode, lol.
 
